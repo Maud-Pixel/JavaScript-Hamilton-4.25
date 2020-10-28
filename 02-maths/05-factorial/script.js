@@ -12,11 +12,24 @@
 (function() {
     
     // to get the value of an input: document.getElementById("element-id").value
+    
+    document.getElementById("run").addEventListener("click", function () { 
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-
+        let number_string = document.getElementById("number").value;
+        let number = parseInt(number_string, 10);
+        alert(factoriel(number));
     });
 
+    
+    function factoriel(number)
+        {    if (number > 1)
+            {
+                return number * factoriel(number-1);
+            }
+            else
+            {
+                return 1 ;
+            }
+           
+        }  
 })();

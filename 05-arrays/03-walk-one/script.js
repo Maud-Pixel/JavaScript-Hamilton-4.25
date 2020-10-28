@@ -26,6 +26,30 @@
         "cherry",
     ];
 
-    // your code here
+    
+    let i= 0;
+    document.getElementById("run").addEventListener("click", function()
+    {
+        setInterval(display, 2000);
+
+        
+        
+
+    })
+     
+    function display()
+    {
+        if(i < fruits.length)
+        {
+            console.log(fruits[i]);
+            i++;
+        }
+        else 
+        {
+            clearInterval();
+        }
+    }
+   
+    
 
 })();

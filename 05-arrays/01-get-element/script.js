@@ -26,6 +26,17 @@
         "cherry",
     ];
 
+    document.getElementById("run").addEventListener("click", function()
+    {
+        let result=""
+        
+        for(let i= 0; i <= 3 ; i++)
+        {
+            result+=(fruits[i])+', ';
+        }
+        alert(result);
+        
+    })
     // your code here
 
 })();

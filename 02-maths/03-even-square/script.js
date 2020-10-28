@@ -12,8 +12,20 @@
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
+       let sentence = "";
+       let num = 0;
+        for (let i = 0; i <= 21; i++)
+        {
+            result = Math.pow(num,2);
+            sentence = sentence + String(result) + ", ";
+            num++;
+            
+        }
+        alert(sentence);
+        
+        
+        
+        
 
     });
 

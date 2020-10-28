@@ -11,6 +11,15 @@
 
 (function() {
 
+    let question = prompt("Would you like some cake ?")
+    if (question == "yes")
+    {
+      alert("Congratulation, you're the best !");
+    }
+    else
+    {
+      alert("More cake for me then !");
+    }
   // your code here
 
 })();

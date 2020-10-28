@@ -89,6 +89,21 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function()
+    {
+        let i = 0;
+        new_array = [];
+        people.forEach(item =>
+            {
+                if (item.age >= 18)
+                {
+                    new_array[i] = `${item.firstname}, ${item.lastname}`;
+                    i++;
+                }
+            }
+            )
+        console.log(new_array);
+    }
+    )
 
 })();

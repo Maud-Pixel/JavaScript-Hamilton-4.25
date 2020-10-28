@@ -11,6 +11,25 @@
 
 (function() {
 
-    // your code here
-
+    for(x = 100; x >0; x++)
+    {
+        if (x%3 === 0 && x%5===0)
+        {
+            console.log("fizzbuzz");
+            
+        }
+        else if (x%3 === 0)
+        {
+            console.log("buzzzz");
+            
+        }
+        else if (x%5 === 0)
+        {
+            console.log("fizzz");  
+        }
+        else
+        {
+            console.log("Isn't buzz, isnt' fizz, Isn't Fizzzbuuzz");
+        }
+    }
 })();

@@ -11,6 +11,27 @@
 
 (function() {
 
-    // your code here
+    const y = document.getElementById("validity");
+    const x = document.getElementById("pass-one");
+    
 
+    document.getElementById("pass-one").addEventListener("keyup", function()
+    {
+        
+        const reg = /[a-zA-Z]{8,}/;
+        const reg2 = /[0-9]{2,}/;
+        const reg3 = /[a-zA-Z]{8,}[0-9]{2,}/;
+
+        if(x.value.match(reg2 && reg))
+        {
+            console.log("cool");
+        }
+        else
+        {
+            console.log("aïe");
+        }
+
+    })
+    
+    
 })();

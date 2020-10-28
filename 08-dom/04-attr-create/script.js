@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+     let source = document.getElementById("source");
+     let attribut = source.getAttribute("data-image");
+     let figure = document.querySelector("figure");
+     let new_attribut = figure.setAttribute("src",attribut);
+     console.log(new_attribut);
+     source.removeAttribute("data-image");
+
+    
+     
+        
+        
+    
+    
+   
 
 })();

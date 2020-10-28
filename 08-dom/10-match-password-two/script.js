@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function()
+    {
+        let pass1 = document.getElementById("pass-one").value;
+        let pass1_box = document.getElementById("pass-one");
+        let pass2 = document.getElementById("pass-two").value;
+        let pass2_box = document.getElementById("pass-two");
+        if (pass1 === pass2)
+        {
+            console.log("ok");
+            pass1_box.setAttribute("class", "good");
+            pass2_box.setAttribute("class", "good");
+        }
+        else
+        {
+            console.log("error");
+            pass1_box.setAttribute("class", "error");
+            pass2_box.setAttribute("class", "error");
+        }
+    })
 
 })();

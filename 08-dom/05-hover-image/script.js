@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
+    let image = document.getElementsByTagName("img")[0];
+    let new_image = image.getAttribute("data-hover");
+    image.setAttribute("src", new_image);
 
 })();

@@ -28,6 +28,32 @@
         "cerise",
     ];
 
-    // your code here
+   document.getElementById("run").addEventListener("click", function()
+   {
+       
+       let new_fruits = [];
+       let index = 0
+       let result = [];
+        
+       for(let i=0; i<fruits.length; i++)
+       {
+            for(let j=1; j < fruits.length; j++)
+            {
+                if (fruits[i] == fruits[j])
+                {
+                    index == fruits.indexOf(fruits[j]);
+                    result[i] = `${fruits.splice(index, 1)}`; 
+                    
+                }  
+            }
+       }
+           
+       console.log(result);
+        
+        
+
+
+    })
+
 
 })();

@@ -9,8 +9,22 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function question() {
 
+    let age = prompt("What's your age ?");
+    let gender = prompt("What's your gender ?");
+    let town = prompt("What's your town ?");
+    let confirm= prompt("Enter 'confirm' to confirm your answer");
+
+    if (confirm=="confirm")
+    {
+        alert("Thank you very much !");
+    }
+    else
+    {
+        question();
+
+    }
     // your code here
 
 })();

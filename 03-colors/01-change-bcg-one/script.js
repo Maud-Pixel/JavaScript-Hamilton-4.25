@@ -11,6 +11,31 @@
 
 (function() {
 
-    // your code here
+    let b1 = document.querySelectorAll('button');
+    b1.forEach(item =>
+        
+                item.addEventListener("click", function()
+                    {
+                        let red = document.getElementById("red");
+                        let green = document.getElementById("green");
+                        let yellow = document.getElementById("yellow");
+                        let blue= document.getElementById("blue");
+                        let body= document.getElementsByTagName("body");
+                        
+                        switch(item)
+                        {
+                            case red : document.body.style.backgroundColor = "red";
+                                break;
+                            case green: document.body.style.backgroundColor = "green";
+                                break;
+                            case yellow: document.body.style.backgroundColor = "yellow";
+                                break;
+                            case blue: document.body.style.backgroundColor = "blue";
+                                break;
+                        }
+                       
+                    }
+            ));
 
 })();
+

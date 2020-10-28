@@ -11,6 +11,25 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById("target")
+    let new_table = document.createElement("table");
+    
+
+    for(let i=0; i<10; i++)
+    {
+        let new_row = document.createElement("tr");
+        new_row.innerHTML= `By ${i +1} | `;
+        target.appendChild(new_row);
+        
+             for(let j=0; j<10; j++)
+           {
+
+                let new_target = document.querySelectorAll("tr");
+                let new_column = document.createElement("td");
+                new_column.innerHTML = (j+1)*(i+1);
+                new_target.forEach(item =>
+                    item.appendChild(new_column))   
+           }
+    }
 
 })();

@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
-
+    let array = document.getElementsByClassName("target");
+    
+    for(let i=0; i<array.length; i++)
+    {
+        array[i].innerHTML = "owned";
+    }
+    
 })();

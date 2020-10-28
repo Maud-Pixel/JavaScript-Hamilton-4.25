@@ -11,6 +11,29 @@
 
 (function() {
 
-    // your code here
-
+        let body = document.getElementsByTagName("body");
+        let num_string = "#";
+        let numArray = [];
+        numArray.length = 6;
+        max = 15; 
+        min= 1
+        for(let i=0 ; i < 6; i++)
+        {
+            numArray[i]= Math.floor(Math.random()* (max-min+1) + min)
+            switch(numArray[i]){
+                case 10 : numArray[i] = "A";
+                case 11: numArray[i] = "B";
+                case 12: numArray[i] = "C";
+                case 13: numArray[i] = "D";
+                case 14: numArray[i] = "E";
+                case 15: numArray[i] = "F";
+            }
+           
+        }
+        numArray.forEach(item => num_string = num_string + item);
+        alert(num_string);
+        document.body.style.backgroundColor = num_string;
+        
+    
+    
 })();

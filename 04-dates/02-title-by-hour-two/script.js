@@ -11,8 +11,30 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
+    let changement = document.getElementsByTagName("p")[1];
+    let now = new Date();
+    let hour = now.getHours();
+    let minut = now.getMinutes();
+    
+    if (hour == 17)
+        {
+            if (minut >= 30)
+            {
+                changement.innerHTML = "Good evening";
+            }
+            else
+            {
+                changement.innerHTML = "Hello";
+            }
+        }
+    else if (hour > 17)
+    {
+        changement.innerHTML = "Good evening";
+    }
+    else
+    {
+        changement.innerHTML = "Hello";
+    }
+    alert(hour);
 
 })();

@@ -37,6 +37,46 @@
         "tangent",
         "arboré",
     ]);
-
-    // your code here
+ 
+    document.getElementById("run").addEventListener("click", function()
+    {
+        let change = document.getElementById("target");
+        let result =[];
+        let new_adjective = [];
+        let total = [];
+        let i = 0;
+        
+        let new_adj = Array.from(adjectives);
+           
+            let key_surprise = getRandomInt(11);
+            birds.forEach(item =>
+                {
+                    if (i == key_surprise)
+                    {
+                        if (item.fem == true && i < new_adj.length)
+                        {
+                            result = `${(item.name)} ${(new_adj[i])}e `;
+                        }
+                        else if (new_adj && i < new_adj.length)
+                        {
+                            result = `${(item.name)} ${(new_adj[i])} `
+                        }
+                        else
+                        {
+                            result = `${(item.name)} `
+                        }
+                    }
+                    total = result;
+                    i++
+                })
+            console.log(key_surprise);
+            key_surprise = getRandomInt(11);
+            
+            change.innerHTML = total;
+                
+            
+    })
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
 })();
