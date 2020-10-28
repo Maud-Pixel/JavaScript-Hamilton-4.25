@@ -17,7 +17,7 @@
     target.appendChild(new_text);
     let sentence = target.innerHTML;
     let array = target.innerHTML.split(' ');
-   
+    target.innerHTML =" ";
 
     let j =0;
     array.forEach(item =>
@@ -28,13 +28,12 @@
             span_for_one.setAttribute("class", `span_one`);
             
         })
-
+       
         let array_class = document.getElementsByClassName(`span_one`);
         for(let i= 0; i<array_class.length; i++)
         {
             array_class[i].innerHTML = `${array[i]} `; 
             array_class[i].style.fontSize = `${(i+1)*10}px`;
-            array[i] =" ";
         }
        
    
