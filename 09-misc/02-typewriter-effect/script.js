@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+   let target = document.getElementById("target");
+   let new_span = document.createElement("span");
+   let string = "Attention Mesdames et Messieurs !";
+   target.insertAdjacentElement('beforeBegin', new_span);
+   let i = 0;
+   function my_interval()
+    {
+        let x = string.substring(i++,i);
+        new_span.innerHTML += x;
+        
+       
+    }
+   let y = setInterval(my_interval, 300);
+    
+  
+   
 
+   
+  
 })();

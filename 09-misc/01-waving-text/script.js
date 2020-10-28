@@ -15,20 +15,16 @@
     let new_text = document.createElement("span");
     new_text.innerHTML = "What's this sensation ?";
     target.appendChild(new_text);
-    for( let i=0; i< target.length; i++)
-    {
-       
-            
-            
-       
-            target.style.fintSize ="90px";
-        
-        
-    }
-       
-;    
-   
+    let sentence = target.innerHTML;
+    let array = target.innerHTML.split('n');
+
+    console.log(target);
+    console.log(array);
+
     
+    
+        
+   
     
         
     
