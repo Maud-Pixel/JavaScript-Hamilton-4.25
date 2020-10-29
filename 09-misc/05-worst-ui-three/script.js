@@ -13,8 +13,12 @@
     
     let target = document.getElementById("target");
     let array_numbers = document.querySelectorAll("input");
-    let result = [];
+    let array_buttons = document.querySelectorAll("button");
+    let result = []
+    result.length = 4;
     target.innerHTML = result;
+   
+    
     
    //part_one
    let part_one = document.getElementById("part-one");
@@ -35,7 +39,7 @@
     fix_one.addEventListener("click", function()
     {
         clearInterval(t);
-        result +=  "0" + String(part_one.value)+"/";
+        result[0] =  "0" + String(part_one.value);
         target.innerHTML = result;
 
     })
@@ -59,7 +63,14 @@
      fix_two.addEventListener("click", function()
      {
          clearInterval(t2);
-         result +=  String(part_two.value);
+         if((String(part_two.value))< 10)
+            {
+                result[1] = `0${String(part_two.value)}`;
+            }
+         else
+            {
+                result[1] = String(part_two.value);
+            }
          target.innerHTML = result;
  
      })
@@ -79,7 +90,14 @@
     fix_three.addEventListener("click", function()
      {
          clearInterval(t3);
-         result +=  String(part_three.value);
+         if((String(part_three.value ))< 10)
+            {
+                result[2] = `0${String(part_three.value)}`;
+            }
+         else
+            {
+                result[2] = String(part_three.value);
+            }
          target.innerHTML = result;
  
      })
@@ -100,7 +118,14 @@
      fix_four.addEventListener("click", function()
       {
           clearInterval(t4);
-          result +=  String(part_four.value);
+          if((String(part_four.value)) < 10)
+            {
+                result[3] = `0${String(part_four.value)}`;
+            }
+         else
+            {
+                result[3] = String(part_four.value);
+            }
           target.innerHTML = result;
       })
      
