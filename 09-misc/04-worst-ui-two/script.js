@@ -11,6 +11,55 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById("target");
+    let part_one = document.getElementById("part-one");
+    let part_two = document.getElementById("part-two");
+    let part_three = document.getElementById("part-three");
+    let part_four = document.getElementById("part-four");
+    
+    let w = parseInt(part_one.innerHTML);
+    let x = parseInt(part_two.innerHTML);
+    let y = parseInt(part_three.innerHTML);
+    let z = parseInt(part_four.innerHTML);
+    
+    
 
+     part_one.addEventListener("click", function()
+    {
+        if(w <= 499)
+        {
+            w +=1;       
+        }
+        else 
+        {
+            w = 460
+            console.log("Stop clicking guy, your finger will wear out.");
+        }
+       w;
+       localStorage.setItem("1", "w");
+
+    });
+    part_two.addEventListener("click", () => { x = plus_much(x)});
+    part_three.addEventListener("click", () => {y = plus_much(y)});
+    part_four.addEventListener("click", () => {z = plus_much(z)});
+    w = localStorage.getItem("1");
+    target.innerHTML = `${w}`;
+    
+
+    function plus_much(b)
+    {
+        if(b <= 99)
+        {
+            b +=1        
+        }
+        else
+        {
+            b = 00;
+        } 
+        return b;
+    } 
+    
+     // to do ;
+    
+    
 })();
