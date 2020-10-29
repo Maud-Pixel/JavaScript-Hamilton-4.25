@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+    let slider = document.getElementById("slider");
+    let val = slider.value;
+    let target = document.getElementById("target");
 
+    slider.addEventListener("click", function(){
+        console.log("ok");
+        target.innerHTML = `0${slider.value}`;
+    })
 })();
