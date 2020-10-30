@@ -11,6 +11,23 @@
 
 (function() {
 
-    // your code here
+  result = [];
+  let new_x = 0;
+  let target = document.getElementById("target");
+  
 
+  document.getElementById("increment").addEventListener("click", function()
+  {
+    new_x +=1;
+    target.innerHTML = new_x;
+    result.push(new_x);
+    console.log(result);
+    localStorage.setItem("incrementation", result);
+  })
+
+  window.addEventListener("load", function(){
+    x = localStorage.getItem("incrementation");
+    target.innerHTML= (x[x.length-1])
+    
+  })
 })();

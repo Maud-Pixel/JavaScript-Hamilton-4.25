@@ -69,9 +69,6 @@
         target.innerHTML = result;
     });
     
-   
-    
-
     function plus_much(b)
     {
         if(b < 99)
@@ -84,8 +81,5 @@
         } 
         return b;
     } 
-    
-     // to do ;
-    
-    
+   
 })();
