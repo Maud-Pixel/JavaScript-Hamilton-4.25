@@ -14,11 +14,4 @@
     var target = document.getElementById("pass-one");
     target.setAttribute("maxlength", "10");
         
-
-        
-            
-
-    
-    
-
 })();
