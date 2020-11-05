@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    document.getElementsByClassName("material")[0].firstElementChild.innerHTML = "owned";
+
 
 })();
