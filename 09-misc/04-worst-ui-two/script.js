@@ -22,8 +22,8 @@
     let y = parseInt(part_three.innerHTML)-1;
     let z = parseInt(part_four.innerHTML)-1;
     let result = [];
-    result.length = 4;
-    target.innerHTML = result;
+    
+
 
      part_one.addEventListener("click", function()
     {
@@ -38,6 +38,7 @@
         }
        result[0] = `0${w}`;
        target.innerHTML = result;
+       part_one.innerHTML = `0${w}`;
 
     });
     part_two.addEventListener("click", () => { 
@@ -49,6 +50,7 @@
         else {result[1] = x;}
         
         target.innerHTML = result;
+        part_two.innerHTML = x;
     });
     part_three.addEventListener("click", () => {
         y = plus_much(y)
@@ -58,6 +60,7 @@
         }
         else {result[2] = y}
         target.innerHTML = result;
+        part_three.innerHTML = y;
     });
     part_four.addEventListener("click", () => {
         z = plus_much(z)
@@ -67,6 +70,7 @@
         }
         else {result[4] = z;}
         target.innerHTML = result;
+        part_four.innerHTML = z;
     });
     
     function plus_much(b)
