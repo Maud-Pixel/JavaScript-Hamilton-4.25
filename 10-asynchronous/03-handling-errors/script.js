@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", () =>
+    {
+        window.lib.getPersons((error, persons)=>
+        {
+            if (persons){
+            persons.forEach(person => {console.log(person)})}
+            else { console.error(error)}
+          
+        }) 
+    })
 })();

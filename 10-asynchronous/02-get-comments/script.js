@@ -19,13 +19,12 @@
             try{
                 articles.forEach(article => 
                 {
-                    
-                    article["commentaire"] = 
-                     window.lib.getComments(article.id,(error, comments)=> {
-                        try{return comments}
-                        catch{ return error }
+                    window.lib.getComments(article.id,(error, comments)=> {
+                        try{
+                        article["commentaire"] = comments;  
+                        console.log(comments)}
+                        catch{ return error}
                         });
-                    
                 })
                 console.log(articles)
             }
