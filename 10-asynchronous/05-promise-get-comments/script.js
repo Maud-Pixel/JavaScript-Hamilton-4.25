@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>
+    {
+        const promise = window.lib.getComments();
+        promise.then(result=>
+        {
+            if(result)
+            {
+                result.forEach(item =>
+                    {
+                        console.log(item)
+                    })
+            }
+            else
+            {
+                console.log("no result baby");
+            }
+        
+        }, error => console.log("error")
+        
+
+        )
+    })
 })();
