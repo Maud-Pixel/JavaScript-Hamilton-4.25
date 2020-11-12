@@ -13,9 +13,18 @@
    document.getElementById("run").addEventListener("click", async function exercise()
    {
        let promise1 = await window.lib.getPosts()
-       let promise2 = await window.lib.getComments();
-
-       exercise.foreach(articles =>{promise2(article.id)})
+       
+      promise1.forEach(item =>
+       {
+           
+           async function test(){
+           let promise2 = await window.lib.getComments(item.id);
+           item["commentaire"] = promise2[item.id];
+           };
+           test();
+           
+       })
+       console.log(promise1);
     });
 
   
