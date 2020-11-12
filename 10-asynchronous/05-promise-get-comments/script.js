@@ -12,15 +12,18 @@
 (() => {
     document.getElementById("run").addEventListener("click", ()=>
     {
-        const promise = window.lib.getComments();
+        const promise = window.lib.getPosts();
         promise.then(result=>
         {
             if(result)
             {
-                result.forEach(item =>
+                result.forEach(article =>
                     {
-                        console.log(item)
+                        const promise2 = window.lib.getComments(article.id);
+                        promise2.then(result2 => {article["commentaire"]= result2[article.id]})
+                         
                     })
+                console.log(result) 
             }
             else
             {

@@ -21,8 +21,8 @@
                 {
                     window.lib.getComments(article.id,(error, comments)=> {
                         try{
-                        article["commentaire"] = comments;  
-                        console.log(comments)}
+                        article["commentaire"] = comments[article.id];  
+                         }
                         catch{ return error}
                         });
                 })

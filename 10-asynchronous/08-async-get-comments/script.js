@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+   document.getElementById("run").addEventListener("click", async function exercise()
+   {
+       let promise1 = await window.lib.getPosts()
+       let promise2 = await window.lib.getComments();
+
+       exercise.foreach(articles =>{promise2(article.id)})
+    });
+
+  
 })();
