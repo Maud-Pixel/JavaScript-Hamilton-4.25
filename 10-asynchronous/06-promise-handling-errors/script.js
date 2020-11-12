@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>
+    {
+        const promise = window.lib.getPersons();
+
+        promise.then(result =>{
+            if (result)
+            {
+                result.forEach(item => {console.log(item)})
+            }
+            else {console.error()}
+        })
+    })
 })();
