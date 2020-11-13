@@ -10,5 +10,23 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>
+    {
+        let hero_id = document.getElementById("hero-id").value;
+        fetch("http://localhost:3000/heroes")
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(item =>{
+               
+                if (item.id == hero_id)
+                {
+                    delete item.id;
+                    delete item.name;
+                    delete item.alterEgo;
+                    delete item.abilities;
+                }
+            })
+            response.forEach(item => console.log(item))
+        })
+    })
 })();
