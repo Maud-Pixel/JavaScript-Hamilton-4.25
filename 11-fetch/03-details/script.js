@@ -10,5 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>
+    {
+        let hero_id = document.getElementById("hero-id").value;
+        let template = document.querySelector("#tpl-hero");
+        let place = document.getElementById("target");
+        fetch("http://localhost:3000/heroes")
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(item =>{
+               
+                if (item.id == hero_id)
+                {
+                    let clone = document.importNode(template.content, true);
+                    let name = clone.querySelector("strong");
+                    let alter = clone.querySelector("em");
+                    let abilities = clone.querySelector(".powers");
+                    name.textContent = JSON.stringify(item.name);
+                    alter.textContent = JSON.stringify(item.alterEgo);
+                    abilities.textContent = JSON.stringify(item.abilities);
+                    place.appendChild(clone);
+                }
+            })
+
+        })
+    })
 })();
